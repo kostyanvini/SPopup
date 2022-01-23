@@ -60,16 +60,6 @@
     opacity: 1;
   }
 }
-
-@keyframes spopupscale {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 @keyframes spopuptop {
   0% {
     top: -100%;
@@ -80,18 +70,18 @@
 }
 @keyframes spopupright {
   0% {
-    right: -100%;
+    left: 100%;
   }
   100% {
-    right: 0;
+    left: 0;
   }
 }
 @keyframes spopupbottom {
   0% {
-    bottom: -100%;
+    top: 100%;
   }
   100% {
-    bottom: 0;
+    top: 0;
   }
 }
 @keyframes spopupleft {
