@@ -1,0 +1,105 @@
+.spopup-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+}
+
+.spopup-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spopup {
+  position: absolute;
+  width: 50%;
+  z-index: 100;
+  background: #fff;
+  max-height: 100%;
+  overflow: hidden auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spopup-content {
+  padding: 20px;
+}
+
+.spopup-close-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@keyframes spopupopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spopupscale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spopuptop {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes spopupright {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes spopupbottom {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes spopupleft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
