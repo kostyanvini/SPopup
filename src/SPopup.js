@@ -44,6 +44,8 @@ import defaultParams from './default-settings';
                     this.refs.popup = this.refs.content[0];
                 }
 
+                this.initEvents();
+
                 if (this.refs.openPopup) {
                     this.refs.openPopup.forEach(el => el.addEventListener('click', () => this.show()));
                 }
@@ -52,15 +54,14 @@ import defaultParams from './default-settings';
                     this.closePopup.forEach(el => el.addEventListener('click', () => this.close()));
                 }
 
-                this.initEvents();
-                return this.popup ? this.popup.dispatchEvent(new Event('init')) : new Error('SPopup is not initialized');
+                return this.refs.popup ? this.refs.popup.dispatchEvent(new Event('init')) : new Error('SPopup is not initialized');
             }
 
             initEvents() {
                 const on = this.params.on;
                 for (const key in on) {
                     if (Object.hasOwnProperty.call(on, key) && on[key]) {
-                        this.popup.addEventListener(key, on[key]);
+                        this.refs.popup.addEventListener(key, on[key]);
                     }
                 }
             }
