@@ -129,7 +129,7 @@ import defaultParams from './default-settings';
             }
             on(e, f) {
                 if (e && f) {
-                    this.popup.addEventListener(e, f);
+                    this.refs.popup.addEventListener(e, f.bind(this));
                     return this;
                 }
             }
@@ -142,7 +142,7 @@ import defaultParams from './default-settings';
                     document.querySelectorAll('.spopup-container').forEach(popup => {
                         popup.style.visibility = 'hidden';
                         popup.style.opacity = '0';
-                        this.popup.style.animation = ``;
+                        popup.style.animation = ``;
                     });
                 }
             }
