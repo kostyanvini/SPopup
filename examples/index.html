@@ -5,50 +5,369 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <button class="popup-open">клик попап</button>
+    <div class="container main">
+        <section class="main__section">
+            <h2 class="main__title">Basic example</h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-1',
+                        src: '#content-1',
+                    });
+                </pre>
+            </code>
 
-    <div id="content">
-        <h2>тестовый</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-    </div>
+            <button class="popup-open-1 main__button">
+                open base popup
+            </button>
 
-    <button class="popup-open2">открыть второй попап</button>
+            <div id="content-1">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
 
-    <div id="content2">
-        <h2>тестовый</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
-            consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo minima
-            harum. A?</p>
+        <section class="main__section">
+            <h2 class="main__title">
+                Example with animation type opacity
+            </h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-2',
+                        src: '#content-2',
+                        animate: {
+                            time: 500,
+                            effect: 'opacity'
+                        }
+                    });
+                </pre>
+            </code>
 
-        <button class="close-popup">Закрыть попап окно</button>
-        <button class="close-popup1">Закрыть попап окно</button>
-        <button class="close-popup2">Закрыть попап окно</button>
+            <button class="popup-open-2 main__button">
+                open animate popup
+            </button>
+
+            <div id="content-2">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
+
+        <section class="main__section">
+            <h2 class="main__title">
+                Animation type left
+            </h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-2',
+                        src: '#content-2',
+                        animate: {
+                            time: 500,
+                            effect: 'left'
+                        }
+                    });
+                </pre>
+            </code>
+
+            <button class="popup-open-3 main__button">
+                open animate popup
+            </button>
+
+            <div id="content-3">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
+        <section class="main__section">
+            <h2 class="main__title">
+                Animation type right
+            </h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-4',
+                        src: '#content-4',
+                        animate: {
+                            time: 500,
+                            effect: 'right'
+                        }
+                    });
+                </pre>
+            </code>
+
+            <button class="popup-open-4 main__button">
+                open animate popup
+            </button>
+
+            <div id="content-4">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
+        <section class="main__section">
+            <h2 class="main__title">
+                Animation type top
+            </h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-5',
+                        src: '#content-5',
+                        animate: {
+                            time: 500,
+                            effect: 'top'
+                        }
+                    });
+                </pre>
+            </code>
+
+            <button class="popup-open-5 main__button">
+                open animate popup
+            </button>
+
+            <div id="content-5">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
+        <section class="main__section">
+            <h2 class="main__title">
+                Animation type bottom
+            </h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-6',
+                        src: '#content-6',
+                        animate: {
+                            time: 500,
+                            effect: 'bottom'
+                        }
+                    });
+                </pre>
+            </code>
+
+            <button class="popup-open-6 main__button">
+                open animate popup
+            </button>
+
+            <div id="content-6">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
+
+
+        <section class="main__section">
+            <h2 class="main__title">
+                Events modal window
+            </h2>
+            <code>
+                <pre>
+                    new SPopup({
+                        selector: '.popup-open-7',
+                        src: '#content-7',
+                        on: {
+                            afterSpopupOpen() {
+                                console.log('after open');
+                            },
+                            afterSpopupClose() {
+                                console.log('after close');
+                            },
+                            init() {
+                                console.log('init');
+                            },
+                        }
+                    });
+                </pre>
+            </code>
+
+            <button class="popup-open-7 main__button">
+                open animate popup
+            </button>
+
+            <div id="content-7">
+                <h2>Test popup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora eligendi, dignissimos libero
+                    consequuntur eum modi delectus ad aspernatur asperiores eaque corporis ex quibusdam quaerat quia quo
+                    minima
+                    harum. A?</p>
+            </div>
+        </section>
+
+
+        <section class="main__section">
+            <h2 class="main__title">
+                Multiple opening of modal windows
+            </h2>
+            <code>
+                <pre>
+                    // popup 1
+                    new SPopup({
+                        selector: '.popup-open-8',
+                        src: '#content-8',
+                    });
+                    // popup 2
+                    new SPopup({
+                        selector: '.popup-open-9',
+                        src: '#content-9',
+                    });
+                    // popup 3
+                    new SPopup({
+                        selector: '.popup-open-10',
+                        src: '#content-10',
+                    });
+                </pre>
+            </code>
+
+            <button class="popup-open-8 main__button">
+                open multiple 1
+            </button>
+
+            <div id="content-8">
+                <h2>multiple 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nostrum totam
+                    voluptate provident animi ad dolores magnam amet nulla quam ducimus odio quaerat ratione quos
+                    voluptates, aspernatur culpa quae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nostrum totam
+                    voluptate provident animi ad dolores magnam amet nulla quam ducimus odio quaerat ratione quos
+                    voluptates, aspernatur culpa quae.</p>
+                <button class="popup-open-9 main__button">
+                    open multiple 2
+                </button>
+
+                <div id="content-9">
+                    <h2> multiple 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nostrum totam
+                        voluptate provident animi ad dolores magnam amet nulla quam ducimus odio quaerat ratione quos
+                        voluptates, aspernatur culpa quae.</p>
+                    <button class="popup-open-10 main__button">
+                        open multiple 3
+                    </button>
+                    <div id="content-10">
+                        <h2>multiple 3</h2>
+                        <p>
+                            multiple 3
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae, incidunt omnis nam
+                            vel amet nobis
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </div>
 
     <script src="../dist/spopup.js"></script>
