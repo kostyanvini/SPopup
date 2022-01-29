@@ -1,6 +1,6 @@
 {
     "name": "spopup",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A simple and small library for modal windows",
     "main": "./dist/SPopup.js",
     "scripts": {
