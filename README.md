@@ -73,6 +73,12 @@ If an instance is passed, then this particular modal window will close when the 
 If nothing is passed, then all modal windows will close.
  */
 SPopup.close(instance);
+
+/*
+The method accepts all SPopup parameters.
+If nothing is passed, the default modal window will open.
+ */
+SPopup.show(opts);
 ```
 
 Methods of the SPopup instance

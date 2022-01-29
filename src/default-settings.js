@@ -9,4 +9,6 @@ export default {
         afterSpopupClose: '',
         init: '',
     },
+    mode: 'html',
+    content: 'Empty content'
 }
