@@ -4,8 +4,8 @@
     "description": "A simple and small library for modal windows",
     "main": "./dist/SPopup.js",
     "scripts": {
-        "dev": "webpack -w --mode=development",
-        "build": "webpack --mode=production"
+        "dev": "rollup -c -w",
+        "compile": "rollup -c"
     },
     "keywords": [
         "modal",
@@ -25,10 +25,13 @@
     "devDependencies": {
         "@babel/core": "^7.16.10",
         "@babel/preset-env": "^7.16.11",
+        "@rollup/plugin-typescript": "^8.5.0",
         "babel-loader": "^8.2.3",
         "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.5.1",
         "mini-css-extract-plugin": "^2.5.2",
+        "rollup": "^2.79.0",
+        "tslib": "^2.4.0",
         "webpack": "^5.66.0",
         "webpack-cli": "^4.9.1"
     }

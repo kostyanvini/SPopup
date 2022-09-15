@@ -1,1 +1,186 @@
-(()=>{"use strict";const e={popupWrapper:!0,animate:{time:0,effect:null},on:{afterSpopupOpen:"",afterSpopupClose:"",init:""},mode:"html",content:"Empty content"},t={html:'\n        <div class="spopup">\n            <div class="spopup-content">\n            </div>\n            <button class="spopup-close-button">\n                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">\n                    <g fill="currentColor">\n                        <path d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465\n                        c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071\n                        C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343\n                        c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/>\n                    </g>\n                </svg>\n            </button>\n        </div>\n        <div class="spopup-layer"></div>\n    ',image:'\n        <div class="spopup_image">\n            <div class="spopup_image-content">\n            <button class="spopup_image-close-button">\n            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">\n                <g fill="currentColor">\n                    <path d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465\n                    c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071\n                    C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343\n                    c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/>\n                </g>\n            </svg>\n            </button>\n        </div>\n        <div class="spopup-layer"></div>\n    ',empty:""};function n(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function r(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function o(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?r(Object(n),!0).forEach((function(t){i(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):r(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}function s(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function i(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function p(e){return p="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},p(e)}!function(r){if(r.SPopup)return console.warn("SPopup is initialized");if(r&&"object"===p(r)&&void 0===r.SPopup){var c=function(){function r(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,r),i(this,"defaultParams",o({},e)),this.params=o(o({},e),t),this.refs={},this.refs.openPopup=this.getSelector(this.params.selector),this.refs.content=this.getSelector(this.params.src),this.refs.closePopup=this.getSelector(this.params.closePopup),this.refs.defaultContent=this.params.content,this.refs.UI=this.createUI(),this.init()}var p,c,u;return p=r,u=[{key:"close",value:function(e){e?e.close():document.querySelectorAll(".spopup-container").forEach((function(e){return e.dispatchEvent(new Event("onTriggerCloseSPopup"))}))}},{key:"show",value:function(e){var t=new r(e=e||{});if(!t.refs.content){var n=document.createElement("div");n.innerHTML=t.refs.defaultContent,t.refs.content=[n]}return t.show()}}],(c=[{key:"getSelector",value:function(e){if(!e)return null;if(e instanceof HTMLElement)return e;var t,r=document.querySelectorAll(e);return r?1===r.length?[r[0]]:function(e){if(Array.isArray(e))return n(e)}(t=r)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(t)||function(e,t){if(e){if("string"==typeof e)return n(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?n(e,t):void 0}}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}():void 0}},{key:"init",value:function(){var e=this;return console.log(this.refs.content),this.refs.content&&this.refs.content[0].classList.add("spopup-hide"),this.refs.openPopup&&this.refs.openPopup.forEach((function(t){return t.addEventListener("click",(function(){return e.show()}))})),this.refs.popup.dispatchEvent(new Event("init"))}},{key:"initEvents",value:function(){var e=this.params.on;for(var t in e)Object.hasOwnProperty.call(e,t)&&e[t]&&this.refs.popup.addEventListener(t,e[t])}},{key:"createUI",value:function(){var e=this,n=document.createElement("div");return n.classList.add("spopup-container"),n.innerHTML=t[this.params.mode],this.refs.closePopup?this.refs.closePopup.push(n.querySelector(".spopup-layer"),n.querySelector(".spopup-close-button")):this.refs.closePopup=[n.querySelector(".spopup-layer"),n.querySelector(".spopup-close-button")],this.refs.popup=n,this.refs.closePopup.forEach((function(t){return t.addEventListener("click",(function(){return e.close()}))})),this.refs.popup.addEventListener("onTriggerCloseSPopup",(function(){return e.close()})),this.initEvents(),n}},{key:"createTempDiv",value:function(){var e=document.createElement("div");return e.classList.add("spopup-temp"),e}},{key:"show",value:function(){return this.refs.temp=this.createTempDiv(),this.refs.content[0].insertAdjacentElement("afterend",this.refs.temp),this.refs.content[0].classList.remove("spopup-hide"),this.refs.UI.querySelector(".spopup-content").append(this.refs.content[0]),document.body.insertAdjacentElement("beforeend",this.refs.UI),this.params.animate.effect&&(this.refs.popup.style.animation="".concat(this.params.animate.time,"ms spopup").concat(this.params.animate.effect," 0s")),this.refs.popup.dispatchEvent(new Event("afterSpopupOpen")),this}},{key:"close",value:function(){return this.refs.temp.insertAdjacentElement("afterend",this.refs.content[0]),this.refs.temp.remove(),this.refs.content[0].classList.add("spopup-hide"),this.refs.popup.remove(),this.refs.popup.style.animation="",this.refs.popup.dispatchEvent(new Event("afterSpopupClose")),this}},{key:"on",value:function(e,t){if(e&&t)return this.refs.popup.addEventListener(e,t.bind(this)),this}}])&&s(p.prototype,c),u&&s(p,u),Object.defineProperty(p,"prototype",{writable:!1}),r}();r.SPopup=c}}(window)})();
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.SPopup = factory());
+})(this, (function () { 'use strict';
+
+    /******************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+
+    var __assign = function() {
+        __assign = Object.assign || function __assign(t) {
+            for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i];
+                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+            }
+            return t;
+        };
+        return __assign.apply(this, arguments);
+    };
+
+    function html(content) {
+        return "\n        <div class=\"spopup\">\n            <div class=\"spopup__container\">\n                <div class=\"spopup__content\">\n                    ".concat(content, "\n                </div>\n            </div>\n            <div class=\"spopup__layer\"></div>\n            <div class=\"spopup__close\"></div>\n        </div> \n    ");
+    }
+
+    var EventManager = /** @class */ (function () {
+        function EventManager(modal) {
+            this.events = {};
+            this.modal = modal;
+        }
+        EventManager.prototype.dispatch = function (evName) {
+            var _this = this;
+            if (!evName) {
+                console.warn('[EventManager]: Error event name is required parameter');
+            }
+            if (this.events[evName]) {
+                this.events[evName].forEach(function (cb) { return cb.call(_this.modal, _this.modal); });
+            }
+            return this;
+        };
+        EventManager.prototype.on = function (evName, cb) {
+            if (!cb && typeof cb !== "function") {
+                console.warn('[EventManager]: Error callback is required parameter');
+                return;
+            }
+            if (this.events.hasOwnProperty(evName)) {
+                this.events[evName].push(cb);
+            }
+            else {
+                this.events[evName] = [cb];
+            }
+            return this;
+        };
+        EventManager.prototype.off = function (evName) {
+            if (this.events[evName]) {
+                delete this.events[evName];
+            }
+            return this;
+        };
+        return EventManager;
+    }());
+    var Logger = /** @class */ (function () {
+        function Logger() {
+        }
+        Logger.error = function () {
+            var e = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                e[_i] = arguments[_i];
+            }
+            console.error('[SPopup error]: ' + e);
+        };
+        Logger.warn = function () {
+            var e = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                e[_i] = arguments[_i];
+            }
+            console.warn('[SPopup warn]: ' + e);
+        };
+        return Logger;
+    }());
+    var defaultOptions = {
+        on: {},
+        animate: {
+            speed: 0,
+            type: 'none'
+        },
+        mode: 'html',
+        src: null,
+        defaultClose: ['.spopup__close', '.spopup__layer'],
+        close: [],
+        esc: true
+    };
+    var SPopup = /** @class */ (function () {
+        function SPopup(options) {
+            this.originalOptions = options;
+            this.options = __assign(__assign({}, defaultOptions), options);
+            this._EventManager = new EventManager(this);
+            this._init();
+        }
+        SPopup.prototype._getSelector = function (selector) {
+            if (!selector) {
+                return null;
+            }
+            if (selector instanceof HTMLElement) {
+                return selector;
+            }
+            var sel = document.querySelectorAll(selector);
+            if (sel.length) {
+                return sel;
+            }
+        };
+        SPopup.prototype._init = function () {
+            var _this = this;
+            this.trigger = this._getSelector(this.options.src);
+            if (!this.trigger) {
+                Logger.error('option.src is required');
+                return;
+            }
+            this.closeTrigger = this._getSelector(this.options.close.length ?
+                this.options.defaultClose.concat(this.options.close) :
+                this.options.defaultClose);
+            this.trigger.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    _this.open();
+                });
+            });
+            switch (this.options.mode) {
+                case 'html':
+                    this._renderHTML();
+                    break;
+            }
+        };
+        SPopup.prototype._initEvents = function () {
+            var em = this._EventManager;
+            for (var onKey in this.options.on) {
+                if (typeof onKey === 'function') {
+                    em.on('onKey', this.options.on[onKey]);
+                }
+            }
+        };
+        SPopup.prototype._renderHTML = function () {
+        };
+        SPopup.prototype.open = function () {
+            var modal = document.createElement('div');
+            var content = this._getSelector(this.options.src)[0];
+            content.style.display = 'none';
+            modal.innerHTML = html(content.innerHTML);
+            document.body.append(modal);
+        };
+        SPopup.prototype.close = function () {
+        };
+        SPopup.open = function (options) {
+            var popup = new SPopup(options);
+            popup.open();
+            return popup;
+        };
+        SPopup.close = function (instance) {
+            if (instance instanceof SPopup) {
+                instance.close();
+                return;
+            }
+            else {
+                SPopup.Instances.forEach(function (inst) {
+                    inst.close();
+                });
+                return;
+            }
+        };
+        SPopup.Instances = [];
+        return SPopup;
+    }());
+
+    return SPopup;
+
+}));
