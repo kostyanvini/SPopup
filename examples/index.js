@@ -1,8 +1,10 @@
 const btn = document.getElementById('test');
 
+let t;
 btn.addEventListener('click', function () {
-	let t = SPopup.open({
+	t = SPopup.open({
 		src: '#test-content'
 	});
-	console.log(t);
 });
+
+console.log(t);

@@ -26,10 +26,6 @@ var __assign = function() {
     return __assign.apply(this, arguments);
 };
 
-function html(content) {
-    return "\n        <div class=\"spopup\">\n            <div class=\"spopup__container\">\n                <div class=\"spopup__content\">\n                    ".concat(content, "\n                </div>\n            </div>\n            <div class=\"spopup__layer\"></div>\n            <div class=\"spopup__close\"></div>\n        </div> \n    ");
-}
-
 var EventManager = /** @class */ (function () {
     function EventManager(modal) {
         this.events = {};
@@ -66,6 +62,11 @@ var EventManager = /** @class */ (function () {
     };
     return EventManager;
 }());
+
+function html(content) {
+    return "\n        <div class=\"spopup\">\n            <div class=\"spopup__container\">\n                <div class=\"spopup__content\">\n                    ".concat(content, "\n                </div>\n            </div>\n            <div class=\"spopup__layer\"></div>\n            <div class=\"spopup__close\"></div>\n        </div> \n    ");
+}
+
 var Logger = /** @class */ (function () {
     function Logger() {
     }
@@ -85,6 +86,7 @@ var Logger = /** @class */ (function () {
     };
     return Logger;
 }());
+
 var defaultOptions = {
     on: {},
     animate: {
@@ -153,8 +155,11 @@ var SPopup = /** @class */ (function () {
         content.style.display = 'none';
         modal.innerHTML = html(content.innerHTML);
         document.body.append(modal);
+        this._activeModal = modal;
     };
     SPopup.prototype.close = function () {
+        var _a;
+        (_a = this._activeModal) === null || _a === void 0 ? void 0 : _a.close();
     };
     SPopup.open = function (options) {
         var popup = new SPopup(options);
